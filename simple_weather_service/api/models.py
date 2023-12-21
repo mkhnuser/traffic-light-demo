@@ -14,7 +14,9 @@ class City(models.Model):
 class Forecast(models.Model):
     temperature = models.FloatField(help_text=_("Temperature in Celsius."))
     pressure = models.IntegerField(help_text=_("Atmosphere pressure."))
-    wind_speed = models.IntegerField(help_text=_("Wind speed in meters per second."))
+    wind_speed = models.IntegerField(
+        help_text=_("Wind speed in meters per second.")
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
